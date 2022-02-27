@@ -2,11 +2,9 @@
     <!-- Page Header Start -->
     <div class="container-fluid mb-5 bg-soft-blue">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
-            <h1 class="font-weight-semi-bold text-uppercase mb-3">Our Shop</h1>
+            <h1 class="font-weight-semi-bold text-uppercase mb-3">Catalog</h1>
             <div class="d-inline-flex">
-                <p class="m-0"><a href="">Home</a></p>
-                <p class="m-0 px-2">-</p>
-                <p class="m-0">Shop</p>
+                <p class="m-0">Find Your Favorite Product Here!</p>
             </div>
         </div>
     </div>
@@ -97,17 +95,18 @@
             <div class="col-lg-9 col-md-12">
                 <div class="row">
                     <div class="col-12 mb-3">
-                        <div class="top-page d-flex align-items-center justify-content-between">
-                            <p class="m-0">Menampilkan 1-12 dari 156 Barang</p>
+                        <div class="top-page d-flex align-items-center justify-content-end">
                             <div class="dropdown ml-4">
-                                <button class="btn dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Urutkan Dari
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
-                                    <a class="dropdown-item" href="#">Terbaru</a>
-                                    <a class="dropdown-item" href="#">Terlaris</a>
-                                    <a class="dropdown-item" href="#">Termurah</a>
-                                </div>
+                                <select wire:model="sortBy" class="form-control select" name="" id="">
+                                    <option value="created_at">Terbaru</option>
+                                    <option value="price">Harga</option>
+                                </select>
+                            </div>
+                            <div class="dropdown ml-4">
+                                <select wire:model="sortFrom" class="form-control select" name="" id="">
+                                    <option value="asc">Asc</option>
+                                    <option value="desc">Desc</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -119,6 +118,7 @@
                             </div>
                             <div class="card-body text-center p-0 pt-4 pb-3">
                                 <h6 class="text-truncate mb-3">{{ $pl->name }}</h6>
+                                <h6 class="">Rp. {{ number_format($pl->price) }}</h6>
                             </div>
                             <div class="action-button">
                                 <a href=""><i class="fas fa-shopping-cart"></i></a>
@@ -128,6 +128,7 @@
                     </div>
                     @endforeach
                 </div>
+                {{ $products->links() }}
             </div>
             <!-- Shop Product End -->
         </div>

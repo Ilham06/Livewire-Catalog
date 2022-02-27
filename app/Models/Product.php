@@ -38,14 +38,4 @@ class Product extends Model
         return $this->hasMany(Photo::class, 'product_id', 'id');
     }
 
-    public function discount()
-    {
-        return $this->hasOne(Discount::class, 'product_id', 'id');
-    }
-
-    public function transactionDetail()
-    {
-        return $this->hasMany(TransactionDetail::class, 'product_id', 'id');
-    }
-
 }
