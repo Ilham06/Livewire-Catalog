@@ -110,7 +110,7 @@
                             </div>
                         </div>
                     </div>
-                    @foreach ($products as $pl)
+                    @forelse ($products as $pl)
                     <div class="col-lg-4 col-md-6 col-6 pb-1">
                         <div class="card product-item mb-4 position-relative">
                             <div class="product-img position-relative overflow-hidden bg-transparent p-0">
@@ -126,7 +126,15 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
+                    @empty
+                    <div class="col text-center my-5">
+                        <img width="30%" src="{{ asset('assets/no-data.svg') }}" alt="" class="img-fluid" />
+                        <h1 class="mt-3 font-weight-semi-bold">Ups, Tidak Ditemukan Menu</h1>
+                        <p>
+                            Silahkan Cari Keyword Lain!
+                        </p>
+                    </div>
+                    @endforelse
                 </div>
                 {{ $products->links() }}
             </div>
