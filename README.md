@@ -17,6 +17,7 @@ Made With
 How to Install?
 - Clone Repo
 - Install Composer (Composer Install)
+- Setup env
 - Generating Key (php artisan key:generate)
 - Create Database 'livewire_catalog'
 - Import Database (Not Migrate)
