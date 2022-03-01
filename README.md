@@ -1,20 +1,19 @@
-Laravel Livewire Simole Catalog.
+Laravel Livewire Simple Catalog.
 
-Fiture
-- Product Multiple Category
-- Producr Multiple Size
-- Searching
-- Multiple Filter (Category,Brand,Size)
-- OrderBy
-- Paginate
-- Responsive
-- Realtime No Reload
+Fitur
+- Produk Multi Kategori
+- Produk Multi Ukuran
+- Pencarian Realtime
+- Filter Realtime (Kategori, Ukuran, Brand)
+- Urutkan berdasarkan (Harga, Terbaru)
+- Paginasi
+- Responsif
 
-Made With
+Dibuat dengan
 - Laravel 8
 - Livewire 2
 
-How to Install?
+Cara Install
 - Clone Repo
 - Install Composer (Composer Install)
 - Setup env
